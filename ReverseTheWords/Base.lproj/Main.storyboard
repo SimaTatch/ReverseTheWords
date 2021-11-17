@@ -1,24 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ReverseTheWords" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DoP-5C-S4H">
+                                <rect key="frame" x="36" y="744" width="343" height="56"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reverse"/>
+                                <connections>
+                                    <action selector="reverseAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bsk-pu-yC3"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StM-Jh-otC">
+                                <rect key="frame" x="36" y="536" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Zgh-gU-B3K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Text to reverse" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vN7-ww-52S">
+                                <rect key="frame" x="36" y="468" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="This application will reverse your words. Please type text below " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BMc-67-DcK">
+                                <rect key="frame" x="36" y="370" width="343" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="49" id="Ss5-mD-O9r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.0" alpha="0.59768211920529801" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse Words" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xtQ-H3-dTc">
+                                <rect key="frame" x="36" y="310" width="343" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="V2Q-Bt-pfM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="34"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ga8-xA-m3o">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="85"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reverse Words" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Quy-DI-QDm">
+                                <rect key="frame" x="148.5" y="52" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="StM-Jh-otC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="2lF-w2-g7L"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="StM-Jh-otC" secondAttribute="trailing" constant="35" id="2mb-hP-lpU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="DoP-5C-S4H" secondAttribute="trailing" constant="35" id="4gw-RM-tkg"/>
+                            <constraint firstItem="Quy-DI-QDm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="6m8-WC-bem"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="DoP-5C-S4H" secondAttribute="bottom" constant="62" id="94R-Ka-DjK"/>
+                            <constraint firstItem="DoP-5C-S4H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="C62-zo-YqZ"/>
+                            <constraint firstItem="BMc-67-DcK" firstAttribute="top" secondItem="xtQ-H3-dTc" secondAttribute="bottom" constant="19" id="FLt-8G-Yoc"/>
+                            <constraint firstItem="vN7-ww-52S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="GFK-rN-CZG"/>
+                            <constraint firstItem="BMc-67-DcK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="GPm-5g-zyq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xtQ-H3-dTc" secondAttribute="trailing" constant="35" id="H7J-Ih-qOI"/>
+                            <constraint firstItem="ga8-xA-m3o" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="IIO-0L-dBZ"/>
+                            <constraint firstItem="ga8-xA-m3o" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MCL-NS-5Sc"/>
+                            <constraint firstItem="DoP-5C-S4H" firstAttribute="top" relation="greaterThanOrEqual" secondItem="vN7-ww-52S" secondAttribute="bottom" constant="242" id="Myz-r8-axo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BMc-67-DcK" secondAttribute="trailing" constant="35" id="PwI-iw-ELa"/>
+                            <constraint firstItem="ga8-xA-m3o" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qox-5C-iIO"/>
+                            <constraint firstItem="ga8-xA-m3o" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="SJT-qI-WFy"/>
+                            <constraint firstItem="Quy-DI-QDm" firstAttribute="top" secondItem="ga8-xA-m3o" secondAttribute="bottom" constant="-33" id="UFH-J1-Ph4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vN7-ww-52S" secondAttribute="trailing" constant="35" id="b7Q-Kb-5ml"/>
+                            <constraint firstItem="DoP-5C-S4H" firstAttribute="top" relation="lessThanOrEqual" secondItem="xtQ-H3-dTc" secondAttribute="bottom" constant="393" id="b7e-hs-s7d"/>
+                            <constraint firstItem="Quy-DI-QDm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="8" id="fMP-DU-dZC"/>
+                            <constraint firstItem="StM-Jh-otC" firstAttribute="top" relation="lessThanOrEqual" secondItem="vN7-ww-52S" secondAttribute="bottom" constant="34" id="gfc-uh-LC2"/>
+                            <constraint firstItem="vN7-ww-52S" firstAttribute="top" relation="lessThanOrEqual" secondItem="BMc-67-DcK" secondAttribute="bottom" constant="49" id="mff-uZ-qlL"/>
+                            <constraint firstItem="DoP-5C-S4H" firstAttribute="top" relation="lessThanOrEqual" secondItem="StM-Jh-otC" secondAttribute="bottom" constant="158" id="o69-HT-OtA"/>
+                            <constraint firstItem="Quy-DI-QDm" firstAttribute="top" secondItem="ga8-xA-m3o" secondAttribute="bottom" constant="-33" id="qrL-ps-KCU"/>
+                            <constraint firstItem="DoP-5C-S4H" firstAttribute="top" relation="greaterThanOrEqual" secondItem="BMc-67-DcK" secondAttribute="bottom" constant="325" id="sOC-E3-hxX"/>
+                            <constraint firstItem="xtQ-H3-dTc" firstAttribute="top" relation="lessThanOrEqual" secondItem="ga8-xA-m3o" secondAttribute="bottom" constant="225" id="uy9-Xp-hbH"/>
+                            <constraint firstItem="xtQ-H3-dTc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="vdR-fz-jCK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="enterWordTextField" destination="vN7-ww-52S" id="ZGA-S7-DwC"/>
+                        <outlet property="wordLabelResult" destination="StM-Jh-otC" id="xLW-st-037"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="34.782608695652179" y="83.705357142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
