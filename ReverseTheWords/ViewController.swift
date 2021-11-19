@@ -21,11 +21,11 @@ class ViewController: UIViewController {
     var isClear = false
     
     @IBAction func reverseAction(_ sender: UIButton) {
-        if isClear == false {
+        if !isClear {
             reverseTheWord()
             sender.setTitle("Clear", for: .normal)
             isClear = true
-        } else if isClear {
+        } else {
             clear()
             sender.setTitle("Reverse", for: .normal)
             isClear = false
