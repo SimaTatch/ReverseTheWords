@@ -1,28 +1,45 @@
-//
-//  ViewController.swift
-//  ReverseTheWords
-//
-//  Created by Серафима  Татченкова  on 17.11.2021.
-//
+
 
 import UIKit
 
-class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
+
+class ViewController: UIViewController {
     
     @IBOutlet weak var wordLabelResult: UILabel!
     @IBOutlet weak var enterWordTextField: UITextField!
     
-    var wordInfo = ""
-    var reversedWord = ""
+    let reverseManager = ReverseManager()
     var isClear = false
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        hideTheKeyBoard()
+    }
+
+    func clear() {
+        enterWordTextField.text = ""
+        wordLabelResult.text = ""
+        hideTheKeyBoard()
+    }
+    
+    func printOutTheReversedWord(show: String) {
+        let textToShow = reverseManager.reverseTheWord(reverse: show)
+        wordLabelResult.text = textToShow
+        hideTheKeyBoard()
+    }
+    
+    func hideTheKeyBoard() {
+        enterWordTextField.resignFirstResponder()
+    }
     
     @IBAction func reverseAction(_ sender: UIButton) {
         if !isClear {
-            reverseTheWord()
+//      reverseTheWord(reverse: enterWordTextField.text ?? "")
+            printOutTheReversedWord(show: enterWordTextField.text ?? "")
+            
             sender.setTitle("Clear", for: .normal)
             isClear = true
         } else {
@@ -30,30 +47,6 @@ class ViewController: UIViewController {
             sender.setTitle("Reverse", for: .normal)
             isClear = false
         }
-    }
-
-    func reverseTheWord() {
-        wordInfo = enterWordTextField.text!
-        let parts = wordInfo.components(separatedBy: " ")
-        let reversed = parts.map{String($0.reversed())}
-        reversedWord = reversed.joined(separator: " ")
-        printOutTheWord()
-        hideTheKeyBoard()
-    }
-        
-    func clear() {
-        enterWordTextField.text = ""
-        wordLabelResult.text = ""
-        hideTheKeyBoard()
-    }
-    func printOutTheWord() {
-        wordLabelResult.text = "\(reversedWord)"
-    }
-    func hideTheKeyBoard() {
-        enterWordTextField.resignFirstResponder()
-    }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        hideTheKeyBoard()
     }
 }
 

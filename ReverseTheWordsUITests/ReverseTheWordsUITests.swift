@@ -1,9 +1,4 @@
-//
-//  ReverseTheWordsUITests.swift
-//  ReverseTheWordsUITests
-//
-//  Created by Серафима  Татченкова  on 19.11.2021.
-//
+
 
 import XCTest
 

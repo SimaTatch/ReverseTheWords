@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		563E1EB72747DBD100020B95 /* ReverseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 563E1EB62747DBD100020B95 /* ReverseManager.swift */; };
 		92C8A01B274560AB00C9B798 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C8A01A274560AB00C9B798 /* AppDelegate.swift */; };
 		92C8A01D274560AB00C9B798 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C8A01C274560AB00C9B798 /* SceneDelegate.swift */; };
 		92C8A01F274560AB00C9B798 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C8A01E274560AB00C9B798 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		563E1EB62747DBD100020B95 /* ReverseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseManager.swift; sourceTree = "<group>"; };
 		92C8A017274560AB00C9B798 /* ReverseTheWords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReverseTheWords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C8A01A274560AB00C9B798 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92C8A01C274560AB00C9B798 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				92C8A01A274560AB00C9B798 /* AppDelegate.swift */,
 				92C8A01C274560AB00C9B798 /* SceneDelegate.swift */,
 				92C8A01E274560AB00C9B798 /* ViewController.swift */,
+				563E1EB62747DBD100020B95 /* ReverseManager.swift */,
 				92C8A020274560AB00C9B798 /* Main.storyboard */,
 				92C8A023274560AC00C9B798 /* Assets.xcassets */,
 				92C8A025274560AC00C9B798 /* LaunchScreen.storyboard */,
@@ -260,6 +263,7 @@
 			files = (
 				92C8A01F274560AB00C9B798 /* ViewController.swift in Sources */,
 				92C8A01B274560AB00C9B798 /* AppDelegate.swift in Sources */,
+				563E1EB72747DBD100020B95 /* ReverseManager.swift in Sources */,
 				92C8A01D274560AB00C9B798 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
