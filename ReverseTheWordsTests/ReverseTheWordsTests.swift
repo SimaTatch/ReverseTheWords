@@ -11,7 +11,7 @@ class ReverseTheWordsTests: XCTestCase {
         let wordToReverse = "abc"
         let expectedResultAfterReverseWord = "cba"
         //When
-        let resultToTesting = reverseManager.reverseTheWord(reverse: wordToReverse)
+        let resultToTesting = reverseManager.reverseTheWord(sentence: wordToReverse)
         //Then
         XCTAssertEqual(expectedResultAfterReverseWord, resultToTesting)
     }
