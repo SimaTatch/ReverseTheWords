@@ -11,7 +11,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var textToIgnoreField: UITextField!
     
     let reverseManager = ReverseManager()
-    let exclusionReverseManager = ExclusionRulesReverseManager()
     let ignoreCommonWord = IgnoreCommonWord()
     var isClear = false
     
@@ -37,32 +36,10 @@ class ViewController: UIViewController {
         hideTheKeyBoard()
     }
 
-    func compareTwoTextFields (textFieldToReverse: UITextField, textFieldNoReverse: UITextField) -> String {
-        let reversedText = textFieldToReverse.text ?? ""
-        let staticText = textFieldNoReverse.text ?? ""
-        
-        let wordsReversedText = reversedText.components(separatedBy: .whitespaces)
-        let wordsStaticText = staticText.components(separatedBy: .whitespaces)
-        var result = ""
-        for word in wordsStaticText {
-            if !wordsReversedText.contains(word) { continue }
-            result.append(word)
-        }
-        return result
-    }
-    
-    
     func putOutTheReversedWord(show: String) {
-        if textToIgnoreField.isHidden {
-            let textToShow = exclusionReverseManager.reverseTheWords(toReverse: show)
-            wordLabelResult.text = textToShow
-            hideTheKeyBoard()
-        } else {
-            let commonWord = compareTwoTextFields(textFieldToReverse: enterWordTextField, textFieldNoReverse: textToIgnoreField)
-            let textWithExclusion = ignoreCommonWord.reverseWords(toReverse: show, toIgnore: commonWord)
+            let textWithExclusion = ignoreCommonWord.reverseWords(toReverse: show, toIgnore: textToIgnoreField.text ?? "")
             wordLabelResult.text = textWithExclusion
             hideTheKeyBoard()
-        }
     }
     
     
@@ -80,6 +57,7 @@ class ViewController: UIViewController {
         case 0:
             textToIgnoreField.isHidden.toggle()
             exceptionNoticeLabel.isHidden.toggle()
+            wordLabelResult.text = ""
         case 1:
             exceptionNoticeLabel.isHidden.toggle()
             textToIgnoreField.isHidden.toggle()

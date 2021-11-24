@@ -17,8 +17,6 @@
 		92C8A0352747C1C300C9B798 /* ReverseTheWordsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C8A0342747C1C300C9B798 /* ReverseTheWordsTests.swift */; };
 		92C8A0422747CD3D00C9B798 /* ReverseTheWordsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C8A0412747CD3D00C9B798 /* ReverseTheWordsUITests.swift */; };
 		92C8A0442747CD3D00C9B798 /* ReverseTheWordsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C8A0432747CD3D00C9B798 /* ReverseTheWordsUITestsLaunchTests.swift */; };
-		92E99C9B274C16B600928C22 /* ExclusionRulesReverseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E99C9A274C16B600928C22 /* ExclusionRulesReverseManager.swift */; };
-		92E99C9D274D58D000928C22 /* CatchChangesFromTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E99C9C274D58D000928C22 /* CatchChangesFromTF.swift */; };
 		92E99C9F274DC19A00928C22 /* IgnoreCommonWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92E99C9E274DC19A00928C22 /* IgnoreCommonWord.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,8 +52,6 @@
 		92C8A03F2747CD3D00C9B798 /* ReverseTheWordsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReverseTheWordsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92C8A0412747CD3D00C9B798 /* ReverseTheWordsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseTheWordsUITests.swift; sourceTree = "<group>"; };
 		92C8A0432747CD3D00C9B798 /* ReverseTheWordsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseTheWordsUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		92E99C9A274C16B600928C22 /* ExclusionRulesReverseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExclusionRulesReverseManager.swift; sourceTree = "<group>"; };
-		92E99C9C274D58D000928C22 /* CatchChangesFromTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatchChangesFromTF.swift; sourceTree = "<group>"; };
 		92E99C9E274DC19A00928C22 /* IgnoreCommonWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IgnoreCommonWord.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				92E99C9E274DC19A00928C22 /* IgnoreCommonWord.swift */,
-				92E99C9A274C16B600928C22 /* ExclusionRulesReverseManager.swift */,
 				92C8A019274560AB00C9B798 /* ReverseTheWords */,
 				92C8A0332747C1C300C9B798 /* ReverseTheWordsTests */,
 				92C8A0402747CD3D00C9B798 /* ReverseTheWordsUITests */,
@@ -112,7 +107,6 @@
 				92C8A01A274560AB00C9B798 /* AppDelegate.swift */,
 				92C8A01C274560AB00C9B798 /* SceneDelegate.swift */,
 				92C8A01E274560AB00C9B798 /* ViewController.swift */,
-				92E99C9C274D58D000928C22 /* CatchChangesFromTF.swift */,
 				563E1EB62747DBD100020B95 /* ReverseManager.swift */,
 				92C8A020274560AB00C9B798 /* Main.storyboard */,
 				92C8A023274560AC00C9B798 /* Assets.xcassets */,
@@ -270,11 +264,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				92E99C9B274C16B600928C22 /* ExclusionRulesReverseManager.swift in Sources */,
 				92C8A01F274560AB00C9B798 /* ViewController.swift in Sources */,
 				92E99C9F274DC19A00928C22 /* IgnoreCommonWord.swift in Sources */,
 				92C8A01B274560AB00C9B798 /* AppDelegate.swift in Sources */,
-				92E99C9D274D58D000928C22 /* CatchChangesFromTF.swift in Sources */,
 				563E1EB72747DBD100020B95 /* ReverseManager.swift in Sources */,
 				92C8A01D274560AB00C9B798 /* SceneDelegate.swift in Sources */,
 			);

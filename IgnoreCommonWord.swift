@@ -7,10 +7,12 @@ class IgnoreCommonWord {
     func reverseWords (toReverse: String, toIgnore: String) -> String {
         
         var wordsToReverse = toReverse.components(separatedBy: .whitespaces)
+        let toIgnoreWords = toIgnore.components(separatedBy: .whitespaces)
+        
         for (index, word) in wordsToReverse.enumerated() {
             
-            if word == toIgnore {
-                wordsToReverse[index] = toIgnore
+            if toIgnoreWords.contains(word) {
+                wordsToReverse[index] = word
                 continue
             }
             //Only letters
